@@ -179,6 +179,37 @@ h6 {
 }
 
 
+@media (max-width: 1227px) {
+  .site-header.is-scrolled .header-inner {
+    width: min(var(--shell), calc(100% - 48px));
+    max-width: var(--shell);
+    margin-inline: auto;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  .site-header.is-scrolled .nav-left,
+  .site-header.is-scrolled .nav-right {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    transform: none;
+  }
+
+  .site-header.is-scrolled .nav-left {
+    justify-self: end;
+    border-radius: 999px 0 0 999px;
+    margin-right: -1px;
+  }
+
+  .site-header.is-scrolled .nav-right {
+    justify-self: start;
+    border-radius: 0 999px 999px 0;
+    margin-left: -1px;
+  }
+}
+
+
 .hero {
   width: min(100%, 920px);
   min-height: calc(100svh - 82px);

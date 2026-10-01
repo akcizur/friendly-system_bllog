@@ -143,6 +143,38 @@ h6 {
   }
 }
 
+@media (min-width: 1900px) {
+  .site-header .header-inner {
+    width: 100%;
+    max-width: none;
+    padding: 6px 0;
+  }
+
+  .site-header .nav-left,
+  .site-header .nav-right {
+    position: absolute;
+    top: 6px;
+  }
+
+  .site-header .nav-left {
+    left: calc(50% - (var(--shell) / 2) - 18px);
+    transform: translateX(-100%);
+  }
+
+  .site-header .nav-right {
+    right: calc(50% - (var(--shell) / 2) - 18px);
+    transform: none;
+  }
+
+  .site-header.is-scrolled .nav-left {
+    transform: translateX(calc(-100% - 8px));
+  }
+
+  .site-header.is-scrolled .nav-right {
+    transform: translateX(8px);
+  }
+}
+
 .hero {
   width: min(100%, 920px);
   min-height: calc(100svh - 82px);

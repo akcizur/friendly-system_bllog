@@ -1,0 +1,122 @@
+.back-link {
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.back-link:hover {
+  color: var(--fg);
+}
+
+.article-header .post-meta {
+  justify-content: center;
+}
+
+.article-header .lead {
+  max-width: 680px;
+  margin: 0 auto 22px;
+  color: var(--muted);
+  font-size: 1.08rem;
+}
+
+.prose {
+  max-width: var(--measure);
+  margin-inline: auto;
+  font-size: 1.065rem;
+  line-height: 1.78;
+}
+
+.prose h2,
+.prose h3 {
+  font-family: 'Google Sans', system-ui, sans-serif;
+  line-height: 1.1;
+  letter-spacing: -0.045em;
+}
+
+.prose h2 {
+  margin: 2.25em 0 0.65em;
+  font-size: 1.82rem;
+}
+
+.prose h3 {
+  margin: 1.8em 0 0.55em;
+  font-size: 1.38rem;
+}
+
+.prose p {
+  margin: 0 0 1.32em;
+}
+
+.prose a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.prose blockquote {
+  margin: 2em 0;
+  padding: 3px 0 3px 20px;
+  border-left: 2px solid var(--line-strong);
+  color: var(--muted);
+  font-style: italic;
+}
+
+.prose img {
+  margin: 2rem auto;
+  border-radius: var(--radius);
+  filter: grayscale(1);
+}
+
+.article-nav {
+  width: min(100%, 940px);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 62px auto 0;
+}
+
+.article-nav-link {
+  min-width: 0;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  transition: transform 150ms ease, border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.article-nav-link:hover {
+  transform: translateY(-1px);
+  border-color: var(--line-strong);
+  box-shadow: var(--shadow-1);
+}
+
+.article-nav-link.next {
+  text-align: right;
+}
+
+.article-nav-label {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--muted);
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.article-nav-title {
+  display: block;
+  font-family: 'Google Sans', system-ui, sans-serif;
+  font-size: 1rem;
+  font-weight: 650;
+  line-height: 1.2;
+}
+
+@media (max-width: 640px) {
+  .article-nav {
+    grid-template-columns: 1fr;
+  }
+
+  .article-nav-link.next {
+    text-align: left;
+  }
+}

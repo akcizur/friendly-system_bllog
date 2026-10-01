@@ -1,0 +1,28 @@
+---
+import { href } from '@/lib/content';
+---
+
+<footer class="site-footer shell">
+  <div class="footer-inner">
+    <div class="footer-copy">
+      <a class="brand" href={href('/')}>
+        <span class="brand-mark">b</span>
+        <span>bllog</span>
+      </a>
+      <p>Designer · code dev · audio sympatizant. Essays, observations, systems and culture.</p>
+    </div>
+
+    <nav class="footer-links" aria-label="Footer">
+      <a href={href('/journal/')}>Journal</a>
+      <a href={href('/categories/')}>Categories</a>
+      <a href={href('/tags/')}>Tags</a>
+      <a href={href('/search/')}>Search</a>
+      <a href={href('/rss.xml')}>RSS</a>
+    </nav>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© {new Date().getFullYear()} bllog</span>
+    <span>Static by Astro · hosted on GitHub Pages</span>
+  </div>
+</footer>

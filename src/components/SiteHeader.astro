@@ -1,0 +1,65 @@
+---
+import { href } from '@/lib/content';
+
+interface Props {
+  currentPath: string;
+}
+
+const { currentPath } = Astro.props;
+const isJournal = currentPath.includes('/journal');
+const isExplore = currentPath.includes('/categories') || currentPath.includes('/tags');
+const isAbout = currentPath.includes('/about');
+---
+
+<header class="site-header">
+  <div class="shell header-inner">
+    <div class="nav-slot nav-slot-left">
+      <a class="brand" href={href('/')} aria-label="bllog home">
+        <span class="brand-mark" aria-hidden="true">b</span>
+        <span>bllog</span>
+      </a>
+    </div>
+
+    <nav class="desktop-nav" aria-label="Primary">
+      <a href={href('/journal/')} class:list={{ active: isJournal }}>Journal</a>
+      <a href={href('/categories/')} class:list={{ active: isExplore }}>Explore</a>
+      <a href={href('/about/')} class:list={{ active: isAbout }}>About</a>
+    </nav>
+
+    <div class="nav-slot nav-slot-right">
+      <a class="icon-button" href={href('/search/')} aria-label="Search" title="Search">⌕</a>
+      <button
+        class="icon-button"
+        id="theme-toggle"
+        type="button"
+        aria-label="Switch theme"
+        aria-pressed="false"
+        title="Switch theme"
+      >
+        <span class="theme-icon-light" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M20.5 15.2A8.7 8.7 0 1 1 8.8 3.5 8.7 8.7 0 0 0 20.5 15.2Z"/>
+          </svg>
+        </span>
+        <span class="theme-icon-dark" hidden aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+          </svg>
+        </span>
+      </button>
+
+      <details class="mobile-menu">
+        <summary class="icon-button" aria-label="Open menu" title="Open menu">☰</summary>
+        <nav class="mobile-popover" aria-label="Mobile">
+          <a href={href('/journal/')}>Journal</a>
+          <a href={href('/categories/')}>Explore</a>
+          <a href={href('/about/')}>About</a>
+          <a href={href('/search/')}>Search</a>
+          <a href={href('/tags/')}>Tags</a>
+          <a href={href('/rss.xml')}>RSS</a>
+        </nav>
+      </details>
+    </div>
+  </div>
+</header>

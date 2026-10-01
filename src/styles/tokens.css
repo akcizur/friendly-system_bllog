@@ -1,0 +1,36 @@
+:root {
+  --bg: #f5f5f3;
+  --surface: #ffffff;
+  --surface-soft: #f0f0ee;
+  --surface-strong: #e8e8e5;
+  --fg: #111111;
+  --muted: #707070;
+  --line: #ddddda;
+  --line-strong: #cfcfcb;
+  --glass: rgba(255, 255, 255, 0.82);
+  --glass-line: rgba(17, 17, 17, 0.10);
+
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.05), 0 8px 22px rgba(0, 0, 0, 0.045);
+  --shadow-2: 0 2px 4px rgba(0, 0, 0, 0.07), 0 16px 34px rgba(0, 0, 0, 0.07);
+
+  --shell: 1180px;
+  --measure: 680px;
+  --radius: 18px;
+  --radius-sm: 12px;
+}
+
+html[data-theme='dark'] {
+  --bg: #0b0b0c;
+  --surface: #111113;
+  --surface-soft: #18181b;
+  --surface-strong: #202023;
+  --fg: #f3f3f1;
+  --muted: #949494;
+  --line: #2a2a2d;
+  --line-strong: #38383c;
+  --glass: rgba(17, 17, 19, 0.84);
+  --glass-line: rgba(243, 243, 241, 0.10);
+
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.30), 0 8px 22px rgba(0, 0, 0, 0.18);
+  --shadow-2: 0 2px 5px rgba(0, 0, 0, 0.34), 0 16px 34px rgba(0, 0, 0, 0.22);
+}

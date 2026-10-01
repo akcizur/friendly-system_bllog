@@ -13,21 +13,22 @@ const isAbout = currentPath.includes('/about');
 
 <header class="site-header">
   <div class="shell header-inner">
-    <div class="nav-slot nav-slot-left">
+    <div class="nav-cluster nav-left">
       <a class="brand" href={href('/')} aria-label="bllog home">
         <span class="brand-mark" aria-hidden="true">b</span>
         <span>bllog</span>
       </a>
+
+      <nav class="desktop-nav" aria-label="Primary">
+        <a href={href('/journal/')} class:list={{ active: isJournal }}>Journal</a>
+        <a href={href('/categories/')} class:list={{ active: isExplore }}>Explore</a>
+        <a href={href('/about/')} class:list={{ active: isAbout }}>About</a>
+      </nav>
     </div>
 
-    <nav class="desktop-nav" aria-label="Primary">
-      <a href={href('/journal/')} class:list={{ active: isJournal }}>Journal</a>
-      <a href={href('/categories/')} class:list={{ active: isExplore }}>Explore</a>
-      <a href={href('/about/')} class:list={{ active: isAbout }}>About</a>
-    </nav>
-
-    <div class="nav-slot nav-slot-right">
+    <div class="nav-cluster nav-right">
       <a class="icon-button" href={href('/search/')} aria-label="Search" title="Search">⌕</a>
+
       <button
         class="icon-button"
         id="theme-toggle"
@@ -44,7 +45,7 @@ const isAbout = currentPath.includes('/about');
         <span class="theme-icon-dark" hidden aria-hidden="true">
           <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8">
             <circle cx="12" cy="12" r="4"/>
-            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l-1.41-1.41M17.66 6.34l1.41-1.41"/>
           </svg>
         </span>
       </button>

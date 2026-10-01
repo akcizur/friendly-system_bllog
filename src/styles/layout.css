@@ -65,6 +65,8 @@ h6 {
   padding: 5px 8px 5px 7px;
   border-radius: 999px 0 0 999px;
   margin-right: -1px;
+  border-right-color: transparent;
+  box-shadow: var(--shadow-1);
   transform-origin: right center;
 }
 
@@ -74,6 +76,8 @@ h6 {
   padding: 6px;
   border-radius: 0 999px 999px 0;
   margin-left: -1px;
+  border-left-color: transparent;
+  box-shadow: var(--shadow-1);
   transform-origin: left center;
 }
 
